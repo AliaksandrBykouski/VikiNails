@@ -1,0 +1,39 @@
+.header {
+  padding-top: 30px;
+  min-height: 110px;
+  background-color: $color-main;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    &-subtitle {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 700;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &__links {
+    width: 70%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      font-size: clamp(24px, 5vw, 26px);
+      li {
+        cursor: pointer;
+        text-transform: uppercase;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
