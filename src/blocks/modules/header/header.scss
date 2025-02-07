@@ -33,13 +33,14 @@
       list-style-type: none;
       font-size: clamp(20px, 5vw, 26px);
       li {
-        cursor: pointer;
         text-transform: capitalize;
         display: inline-block;
         a {
+          width: 100%;
           position: relative;
           text-decoration: none;
           color: inherit;
+          cursor: pointer;
         }
         a::before {
           content: "";
