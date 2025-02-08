@@ -1,19 +1,20 @@
 <section id="forms" class="forms">
   <div class="container">
-    <h2 class="title title_left">
-      Получите бесплатную консультацию<br />
-      по подбору пульсометра
-    </h2>
-    <div class="consultation__descr">
-      Просто заполните форму заявки<br />
-      и мы перезвоним вам в течении 10 минут
+    <h2 class="forms__title">записаться на ногти или задать вопрос</h2>
+    <div class="forms__descr">
+      Просто заполните форму заявки и я свяжусь с вами в ближайшее время
     </div>
     <form id="consultation-form" class="feed-form" action="#">
       <input name="name" required placeholder="Ваше имя" type="text" />
       <input name="phone" required placeholder="Ваш телефон" />
       <input name="email" required placeholder="Ваш E-mail" type="email" />
-
-      <button class="button button_submit">заказать консультацию</button>
+      <textarea
+        name="text"
+        placeholder="Задайте свой вопрос или запишитесь на ногти"
+        id="textarea"
+        type="text"
+      ></textarea>
+      <button class="button button_submit">записаться</button>
     </form>
   </div>
 </section>
