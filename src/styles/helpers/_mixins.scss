@@ -11,3 +11,10 @@
   text-align: center;
   text-transform: uppercase;
 }
+@mixin title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $color-text;
+  text-align: center;
+  text-transform: uppercase;
+}

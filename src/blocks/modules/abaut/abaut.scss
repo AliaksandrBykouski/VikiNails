@@ -4,11 +4,7 @@
   min-height: 500px;
   background-color: $color-grid;
   &__subtitle {
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $color-text;
+    @include title;
   }
   &__wrapper {
     margin-top: 65px;

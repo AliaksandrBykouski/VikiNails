@@ -2,10 +2,7 @@
   background-color: #fbeaed;
   padding: 50px;
   &__title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 36px;
-    color: $color-text;
+    @include title;
   }
   &__grid {
     margin-top: 50px;
