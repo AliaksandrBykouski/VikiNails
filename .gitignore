@@ -32,3 +32,4 @@ gulpfile.babel.js
 .bemrc.js
 .babelrc.js
 .htaccess
+send_message.php

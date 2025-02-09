@@ -1,20 +1,60 @@
 <section id="forms" class="forms">
   <div class="container">
-    <h2 class="forms__title">записаться на ногти или задать вопрос</h2>
-    <div class="forms__descr">
-      Просто заполните форму заявки и я свяжусь с вами в ближайшее время
+    <div class="forms__wrapper">
+      <div class="forms__wrapper-item_1">
+        <img class="forms__img" src="img/nails.png" alt="nails" />
+      </div>
+      <div class="forms__wrapper-item_2">
+        <div class="forms__title">Свяжитесь со мной</div>
+        <div class="forms__subtitle">Любым удобным для вас способом:</div>
+        <div class="forms__links">
+          <a href=""><img src="img/sprites/facebook.svg" alt="facebook" /></a>
+          <a href=""><img src="img/sprites/instagram.svg" alt="instagram" /></a>
+          <a href=""><img src="img/sprites/whatsapp.svg" alt="whatsapp" /></a>
+          <a href=""><img src="img/sprites/viber.svg" alt="viber" /></a>
+        </div>
+        <div class="forms__subtitle">
+          Или оставьте ваши данные и я свяжусь с вами:
+        </div>
+        <form id="myForm" action="#">
+          <div class="forms__input">
+            <input
+              placeholder="Ваше имя"
+              name="name"
+              id="name"
+              type="text"
+              required
+            />
+            <span id="nameError" class="error"></span><br />
+          </div>
+          <div class="forms__input">
+            <input
+              placeholder="Ваш телефон"
+              name="phone"
+              id="phone"
+              type="text"
+              required
+            />
+            <span id="phoneError" class="error"></span><br />
+          </div>
+          <div class="forms__textarea">
+            <textarea
+              placeholder="Ваше сообщение"
+              name="text"
+              id="text"
+            ></textarea>
+            <span id="textError" class="error"></span><br />
+          </div>
+          <button type="submit" class="forms__btn">Отправить сообщение</button>
+        </form>
+      </div>
     </div>
-    <form id="consultation-form" class="feed-form" action="#">
-      <input name="name" required placeholder="Ваше имя" type="text" />
-      <input name="phone" required placeholder="Ваш телефон" />
-      <input name="email" required placeholder="Ваш E-mail" type="email" />
-      <textarea
-        name="text"
-        placeholder="Задайте свой вопрос или запишитесь на ногти"
-        id="textarea"
-        type="text"
-      ></textarea>
-      <button class="button button_submit">записаться</button>
-    </form>
+  </div>
+  <!-- modal win -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <p>Форма успешно отправлена!</p>
+    </div>
   </div>
 </section>

@@ -1,15 +1,97 @@
 .main {
-  aspect-ratio: 3/1;
+  height: 575px;
   width: 100%;
-  border-radius: 15px;
-  //   min-height: 575px;
-  background: url("../../../img/bg-main.jpg") center center / cover no-repeat;
+  padding: 130px;
+  color: $color-text;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__box-detail {
+    text-align: center;
+  }
   &__title {
-    padding-top: 70px;
-    @include title;
-    span {
-      color: $color-main;
-      font-weight: 700;
+    font-size: 70px;
+    letter-spacing: 30px;
+  }
+  &__shot-dest {
+    margin-top: 50px;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &__button {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-text;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba($color-main, 0.6);
+    background: linear-gradient(
+      10deg,
+      rgba(#000, 0.1) 60%,
+      rgba(#fff, 0.1) 100%
+    );
+  }
+  &__bg-animation {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    height: 575px;
+    z-index: -1;
+    div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      will-change: opacity;
+    }
+    .bg-1 {
+      background: linear-gradient(180deg, #f9dea1 60%, #9bdaff 100%);
+    }
+    .bg-2 {
+      background: linear-gradient(300deg, #f9c3f5 60%, #9bdaff 100%);
+      animation: bg-fade-1 6s linear infinite;
+    }
+    .bg-3 {
+      background: linear-gradient(10deg, #bab2fc 60%, #9bdaff 100%);
+      animation: bg-fade-2 6s linear infinite;
+    }
+  }
+
+  @keyframes bg-fade-1 {
+    0% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 1;
+    }
+    66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes bg-fade-2 {
+    0% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
