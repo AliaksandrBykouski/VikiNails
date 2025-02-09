@@ -18,3 +18,17 @@
   text-align: center;
   text-transform: uppercase;
 }
+@mixin link {
+  display: block;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: $color-main;
+  font-size: 25px;
+  line-height: 48px;
+  color: $color-text;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
