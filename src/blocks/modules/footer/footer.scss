@@ -1,0 +1,113 @@
+.demo-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(farthest-corner at 80%, #fbeaed, #f9a8b7);
+}
+
+.button,
+.soc-but {
+  width: 7rem;
+  height: 7rem;
+}
+
+.button {
+  background: #042037;
+  position: relative;
+  perspective: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+}
+.button:hover .fb {
+  transform: rotateY(180deg);
+}
+.button:hover .tw {
+  transform: rotateY(-180deg);
+}
+.button:hover .gp {
+  transform: rotateX(180deg);
+}
+.button:hover .vk {
+  transform: rotateX(-180deg);
+}
+
+.soc-but {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.vk .back,
+.gp .back {
+  transform: rotateX(180deg);
+}
+
+.tw .back,
+.fb .back {
+  transform: rotateY(180deg);
+}
+
+.fb .back {
+  background: #3b5998;
+}
+
+.vk .back {
+  background: #dd2a7b;
+}
+
+.tw .back {
+  background: #02ac19;
+}
+
+.gp .back {
+  background: #dd4b39;
+}
+
+.fb,
+.vk {
+  transform-origin: 0% 0%;
+}
+
+.gp,
+.tw {
+  transform-origin: 100% 100%;
+}
+
+.tw {
+  transition-delay: 0.1s;
+  transform: rotateY(-90deg);
+}
+
+.gp {
+  transition-delay: 0.2s;
+  transform: rotateX(90deg);
+}
+
+.vk {
+  transform: rotateX(-90deg);
+}
+
+.fb {
+  transition-delay: 0.3s;
+  transform: rotateY(90deg);
+}

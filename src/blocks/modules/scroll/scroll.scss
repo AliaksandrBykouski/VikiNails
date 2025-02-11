@@ -1,0 +1,22 @@
+#scrollToTop {
+  display: none; /* Скрыта по умолчанию */
+  position: fixed;
+  bottom: 75px;
+  right: 75px;
+  width: 50px;
+  height: 50px;
+  background-color: $color-main;
+  color: $color-text;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+#scrollToTop:hover {
+  background: linear-gradient(30deg, #f9c3f5 60%, #9bdaff 100%);
+  transform: scale(1.1);
+}

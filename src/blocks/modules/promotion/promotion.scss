@@ -11,6 +11,8 @@
     grid-template-rows: auto;
     gap: 30px;
     &-item {
+      align-content: end;
+      height: 400px;
       border: 3px solid $color-main;
       border-radius: 10px;
       padding: 30px;
@@ -22,13 +24,13 @@
     }
   }
   &__subtitle {
-    margin-top: 200px;
     font-size: 24px;
     color: $color-text;
     font-weight: 700;
   }
   &__descr {
     margin-top: 20px;
+
     font-size: 18px;
     color: $color-text;
     font-weight: 500;
@@ -42,5 +44,14 @@
   .item-3 {
     background: url("../img/promotion3.png") center center / cover no-repeat;
     grid-column: 1 / span 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promotion__grid {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 20px;
+    }
   }
 }

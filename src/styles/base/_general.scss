@@ -16,3 +16,27 @@ ul {
   max-width: 1140px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1224px) {
+  .container {
+    width: 95%;
+    max-width: 1120px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 95%;
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+    max-width: 420px;
+  }
+}

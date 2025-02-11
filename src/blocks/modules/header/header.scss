@@ -3,7 +3,7 @@
   top: 0;
   z-index: 1000;
   padding-top: 30px;
-  min-height: 110px;
+  height: 130px;
   background-color: $color-main;
 
   &__wrapper {
@@ -31,7 +31,7 @@
       display: flex;
       justify-content: space-between;
       list-style-type: none;
-      font-size: clamp(20px, 5vw, 26px);
+      font-size: clamp(20px, 2vw, 26px);
       li {
         text-transform: capitalize;
         display: inline-block;
@@ -60,5 +60,109 @@
         }
       }
     }
+  }
+}
+
+.hamburger {
+  display: none;
+  &__container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Гамбургер иконка */
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    z-index: 2000;
+    overflow: hidden;
+  }
+
+  .menu-btn .bar {
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    background-color: $color-text;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-btn .bar:nth-of-type(2) {
+    top: calc(50% - 9px);
+  }
+  .menu-btn .bar:nth-of-type(3) {
+    top: calc(50% + 9px);
+  }
+
+  /* Меняем гамбургер иконку, когда меню открыто */
+  .menu-btn.active .bar:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active .bar:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  .menu-btn.active .bar:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+
+  /* Меню, которое будет появляться */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(249, 168, 183, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+  }
+
+  .nav.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: translateX(0);
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .nav .nav__list_item {
+    list-style-type: none;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    position: static;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .header__links {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger .menu-btn {
+    right: 15px;
   }
 }

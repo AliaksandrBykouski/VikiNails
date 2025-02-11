@@ -95,3 +95,22 @@
     }
   }
 }
+@media screen and (max-width: 1224px) {
+  .main {
+    height: 475px;
+    &__shot-dest {
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    &__title {
+      font-size: clamp(30px, 2.5vw, 40px);
+      letter-spacing: 20px;
+    }
+    &__shot-dest {
+      font-size: 16px;
+    }
+  }
+}

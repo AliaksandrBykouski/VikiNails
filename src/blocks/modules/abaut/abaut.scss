@@ -29,3 +29,21 @@
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  .abaut {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .abaut__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .abaut__descr {
+    margin-top: -20px;
+  }
+  .abaut__img {
+    margin-top: 30px;
+    clip-path: circle(35%);
+  }
+}
