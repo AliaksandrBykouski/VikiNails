@@ -23,16 +23,20 @@
   font-size: 4rem;
   color: white;
 }
-.button:hover .fb {
+.button:hover .fb,
+.button:focus .fb {
   transform: rotateY(180deg);
 }
-.button:hover .tw {
+.button:hover .tw,
+.button:focus .tw {
   transform: rotateY(-180deg);
 }
-.button:hover .gp {
+.button:hover .gp,
+.button:focus .gp {
   transform: rotateX(180deg);
 }
-.button:hover .vk {
+.button:hover .vk,
+.button:focus .vk {
   transform: rotateX(-180deg);
 }
 

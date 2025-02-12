@@ -20,3 +20,8 @@
   background: linear-gradient(30deg, #f9c3f5 60%, #9bdaff 100%);
   transform: scale(1.1);
 }
+@media screen and (max-width: 768px) {
+  #scrollToTop {
+    z-index: -1;
+  }
+}
